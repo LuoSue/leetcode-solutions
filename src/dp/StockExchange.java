@@ -47,6 +47,27 @@ public class StockExchange {
         return dp0;
     }
 
+    public int maxProfitGreedy(int[] prices){
+        // 初始化最小价格为一个极大值
+        int minPrice = Integer.MAX_VALUE;
+        // 初始化最大利润为 0
+        int maxProfit = 0;
+
+        // 遍历价格数组
+        for (int price : prices) {
+            // 更新最小价格
+            if (price < minPrice) {
+                minPrice = price;
+            } else {
+                // 计算当前利润并更新最大利润
+                maxProfit = Math.max(maxProfit, price - minPrice);
+            }
+        }
+
+        // 返回最大利润
+        return maxProfit;
+    }
+
     public static void main(String[] args) {
         StockExchange solution = new StockExchange();
 
