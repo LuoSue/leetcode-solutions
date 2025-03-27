@@ -3,11 +3,11 @@ package dp;
 
 /**
  * @author rj
- * @className StockExchange
+ * @className BestTimetoBuyandSellStock
  * @description leetcode 121. 买卖股票的最佳时机
  * @date 2025/3/25 17:32
  */
-public class StockExchange {
+public class BestTimetoBuyandSellStock {
     public int maxProfit(int[] prices) {
         if (prices.length == 0) {
             return 0;
@@ -69,7 +69,7 @@ public class StockExchange {
     }
 
     public static void main(String[] args) {
-        StockExchange solution = new StockExchange();
+        BestTimetoBuyandSellStock solution = new BestTimetoBuyandSellStock();
 
         // 测试用例 1
         System.out.println("Test Case 1:");
